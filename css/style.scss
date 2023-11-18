@@ -1,0 +1,191 @@
+@import "./variables";
+@import "./general";
+@import "./responsive";
+
+@mixin flexCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner {
+  align-items: center;
+}
+
+.banner-container {
+  @include flexCenter();
+}
+
+.text {
+  flex-direction: column;
+}
+
+.banner-img {
+  text-align: right;
+
+  img {
+    width: 420px;
+  }
+}
+
+.dates-container {
+  display: flex;
+  justify-content: flex-end;
+
+  .dates {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+  }
+
+  .date-letter {
+    color: $color-four;
+    font-size: 1.4em;
+    font-weight: bold;
+  }
+}
+
+.habit {
+  @include flexCenter();
+
+  i {
+    color: $color-five;
+    margin-right: 12px;
+  }
+}
+
+.delete-button {
+  background: none; 
+  border: none;
+  cursor: pointer; 
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.habit-container {
+  background-color: $color-one;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border: 2px solid $color-five;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.check-date {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  min-width: 50.3%;
+  margin-right: 18px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-btn {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid $color-eight;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.4s;
+
+  &:checked {
+    background-color: $color-five;
+    border-color: $color-five;
+    
+    &::before {
+      @include flexCenter();
+      content: "\2714";
+      font-size: 14px;
+      color: $color-one;
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      border-radius: 2px;
+      font-weight: bold;
+    }
+  }
+}
+
+.add-habit {
+  float: left;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  input {
+    border: 2px solid $color-five;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    font-family: "Varela Round", serif;
+    outline: none;
+    padding: 10px;
+    margin-left: 26px;
+    width: 200px;
+    transition: all 0.4s ease-in-out;
+
+    &:focus {
+      border: 2px solid $color-three;
+    }
+  }
+
+  button {
+    background-color: $color-four;
+    border: 2px solid $color-four;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: $color-one;
+    cursor: pointer;
+    margin-left: 6px;
+    font-weight: bold;
+    padding: 10px;
+    width: 140px;
+    transition: all 0.4s ease-in-out;
+
+    &:hover {
+      background-color: $color-three;
+      border: 2px solid $color-three;
+    }
+  }
+}
+
+.animate-fade {
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.alert-container {
+  display: none;
+  padding-left: 30px;
+  border-radius: 10px; 
+  text-align: center;
+}
+
+.alert-box {
+  @include flexCenter();
+  width: 100%;
+  height: 60px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: $color-nine;
+  color: $color-one;
+  font-weight: bold;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <title>To-Do List</title>
+    <link rel="preload" href="./fonts/VarelaRound-Regular.woff2" as="font" type="font/woff2" crossorigin />
+    <script src="https://kit.fontawesome.com/2aa6d0aa4a.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="banner">
+        <div class="banner-container">
+          <div class="text">
+            <h1>Lista de Tarefas</h1>
+            <p>Oi! Vamos acompanhar seus hábitos diários abaixo.</p>
+          </div>
+          <div class="banner-img">
+            <img src="./img/background-people.png" alt="Banner" />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="dates-container">
+        <div class="dates">
+          <h3 class="date-letter">D</h3>
+          <h3 class="date-letter">S</h3>
+          <h3 class="date-letter">T</h3>
+          <h3 class="date-letter">Q</h3>
+          <h3 class="date-letter">Q</h3>
+          <h3 class="date-letter">S</h3>
+          <h3 class="date-letter">S</h3>
+        </div>
+      </section>
+
+      <section class="habit">
+        <i class="fa-solid fa-trash"></i>
+        <div class="habit-container">
+          <p>Adicione suas tarefas!</p>
+          <form class="check-date">
+            <label for="sunday" class="checkbox-label"></label>
+            <input type="checkbox" class="checkbox-btn" id="sunday" />
+
+            <label for="monday" class="checkbox-label"></label>
+            <input type="checkbox" class="checkbox-btn" id="monday" />
+
+            <label for="tuesday" class="checkbox-label"></label>
+            <input type="checkbox" class="checkbox-btn" id="tuesday" />
+
+            <label for="wednesday" class="checkbox-label"></label>
+            <input type="checkbox" class="checkbox-btn" id="wednesday" />
+
+            <label for="thursday" class="checkbox-label"></label>
+            <input type="checkbox" class="checkbox-btn" id="thursday" />
+
+            <label for="friday" class="checkbox-label"></label>
+            <input type="checkbox" class="checkbox-btn" id="friday" />
+
+            <label for="saturday" class="checkbox-label"></label>
+            <input type="checkbox" class="checkbox-btn" id="saturday" />
+          </form>
+        </div>
+      </section>
+
+      <div id="habitContainer"></div>
+      <div id="alertContainer" class="alert-container"></div>
+
+      <section class="add-habit-container">
+        <form class="add-habit">
+          <input type="text" id="taskInput" />
+          <button type="button" id="submit" class="submit" onclick="addHabit()">Adicionar tarefa</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="./javascript/script.js"></script>
+  </body>
+</html>

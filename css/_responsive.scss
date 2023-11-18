@@ -1,0 +1,39 @@
+@media only screen and (max-width: 600px) {
+  .banner-container {
+    flex-direction: column;
+    margin: 0 10%;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  .dates-container {
+    margin: 0 8%;
+  }
+
+  .habit {
+    margin: 0 12%;
+  }
+
+  input.checkbox-btn {
+    width: 22px;
+    height: 14px;
+  }
+
+  #taskInput,
+  #submit {
+    margin-left: 12%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 900px) {
+  .banner-container {
+    flex-direction: column;
+  }
+  .dates-container,
+  .habit,
+  .add-habit {
+    margin: 0 8%;
+  }
+}
